@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aaban is learning javaScript</h1>
+
+    <button id="Start">Start</button>
+    <button id="end">End</button>
+
+    <script>
+
+        // setTimeout & clearTimeout
+
+        // const Name = (str) =>{
+        //     console.log(str)
+        // }
+        // const myName = setTimeout( Name, 2000 , "hi im aaban")
+        // document.querySelector("#end").addEventListener("click",()=>{
+        //     clearTimeout(myName)
+        // })
+
+        // setInterval & clearInterval 
+
+    
+        let start = document.querySelector("#Start")
+        let end = document.querySelector("#end")
+        let myNamePrint;
+
+        const myName2 = ()=>{
+            document.querySelector("h1").innerHTML = "i am learning javascript"
+            console.log("hi");
+        }
+
+        if(start){
+            start.addEventListener("click" , () => {
+                myNamePrint = setInterval(myName2, 2000)
+            })
+        } 
+        
+        if(end){
+            end.addEventListener("click" , () => {
+                clearInterval(myNamePrint)
+                console.log("stopped");
+            })
+        }
+
+    </script>
+</body>
+</html>
